@@ -3,48 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио - DevStudio</title>
+    <title>Портфолио работ - созданные сайты и приложения | DevStudio</title>
+    <meta name="description" content="Портфолио веб-студии DevStudio: 150+ успешных проектов - интернет-магазины, корпоративные сайты, мобильные приложения. Реальные кейсы и отзывы клиентов.">
+    <meta name="keywords" content="портфолио веб-студии, примеры работ, созданные сайты, кейсы DevStudio">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav class="container">
             <div class="logo">DevStudio</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="about.html">О нас</a></li>
                 <li><a href="services.html">Услуги</a></li>
                 <li><a href="portfolio.html">Портфолио</a></li>
                 <li><a href="contact.html">Контакты</a></li>
             </ul>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Поиск по сайту...">
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
-    <section class="container" style="padding-top: 120px;">
-        <h1>Наши работы</h1>
-        
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Наше портфолио</h1>
+            <p>150+ успешно реализованных проектов, которые приносят результат нашим клиентам</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <span>Портфолио</span>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Все работы</button>
+            <button class="filter-btn" data-filter="ecommerce">Интернет-магазины</button>
+            <button class="filter-btn" data-filter="corporate">Корпоративные сайты</button>
+            <button class="filter-btn" data-filter="landing">Лендинги</button>
+            <button class="filter-btn" data-filter="mobile">Мобильные приложения</button>
+        </div>
+
         <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <h3>Интернет-магазин одежды</h3>
-                <p>Полнофункциональный магазин с системой оплаты</p>
+            <!-- Интернет-магазин одежды -->
+            <div class="portfolio-item fade-in" data-category="ecommerce">
+                <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')" 
+                     alt="Интернет-магазин модной одежды - проект DevStudio">
+                </div>
+                <div class="portfolio-content">
+                    <span class="portfolio-category">E-commerce</span>
+                    <h3>FashionStore - интернет-магазин одежды</h3>
+                    <p>Полнофункциональный магазин с системой оплаты, корзиной и личным кабинетом</p>
+                    <div class="portfolio-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="portfolio-stats">
+                        <div class="stat">
+                            <i class="fas fa-chart-line"></i>
+                            <span>+300% продаж</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span>3 месяца</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-overlay">
+                    <a href="#" class="view-project">Подробнее о проекте</a>
+                </div>
             </div>
-            
-            <div class="portfolio-item">
-                <h3>Корпоративный портал</h3>
-                <p>Внутренняя система для управления бизнес-процессами</p>
+
+            <!-- Корпоративный портал -->
+            <div class="portfolio-item fade-in" data-category="corporate">
+                <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"
+                     alt="Корпоративный портал компании - разработка DevStudio">
+                </div>
+                <div class="portfolio-content">
+                    <span class="portfolio-category">Корпоративный сайт</span>
+                    <h3>TechCorp Portal</h3>
+                    <p>Внутренняя система для управления бизнес-процессами крупной IT-компании</p>
+                    <div class="portfolio-tech">
+                        <span>Vue.js</span>
+                        <span>Python</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="portfolio-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>500+ пользователей</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span>6 месяцев</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-overlay">
+                    <a href="#" class="view-project">Подробнее о проекте</a>
+                </div>
             </div>
-            
-            <div class="portfolio-item">
-                <h3>Лендинг для стартапа</h3>
-                <p>Продающая страница для IT-компании</p>
+
+            <!-- Лендинг для стартапа -->
+            <div class="portfolio-item fade-in" data-category="landing">
+                <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"
+                     alt="Лендинг для IT-стартапа - разработка DevStudio">
+                </div>
+                <div class="portfolio-content">
+                    <span class="portfolio-category">Лендинг</span>
+                    <h3>StartApp - платформа для стартапов</h3>
+                    <p>Продающая страница для IT-компании с высокой конверсией в заявки</p>
+                    <div class="portfolio-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="portfolio-stats">
+                        <div class="stat">
+                            <i class="fas fa-percentage"></i>
+                            <span>25% конверсия</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span>2 недели</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-overlay">
+                    <a href="#" class="view-project">Подробнее о проекте</a>
+                </div>
             </div>
+
+            <!-- Мобильное приложение -->
+            <div class="portfolio-item fade-in" data-category="mobile">
+                <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"
+                     alt="Мобильное приложение для доставки еды - разработка DevStudio">
+                </div>
+                <div class="portfolio-content">
+                    <span class="portfolio-category">Мобильное приложение</span>
+                    <h3>FoodExpress - доставка еды</h3>
+                    <p>Кроссплатформенное приложение для iOS и Android с системой заказов</p>
+                    <div class="portfolio-tech">
+                        <span>React Native</span>
+                        <span>Firebase</span>
+                        <span>Redux</span>
+                    </div>
+                    <div class="portfolio-stats">
+                        <div class="stat">
+                            <i class="fas fa-download"></i>
+                            <span>50K+ установок</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span>4 месяца</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-overlay">
+                    <a href="#" class="view-project">Подробнее о проекте</a>
+                </div>
+            </div>
+
+            <!-- Интернет-магазин электроники -->
+            <div class="portfolio-item fade-in" data-category="ecommerce">
+                <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"
+                     alt="Интернет-магазин электроники - проект DevStudio">
+                </div>
+                <div class="portfolio-content">
+                    <span class="portfolio-category">E-commerce</span>
+                    <h3>ElectroMarket - магазин электроники</h3>
+                    <p>Современный интернет-магазин с системой рекомендаций и отзывов</p>
+                    <div class="portfolio-tech">
+                        <span>Angular</span>
+                        <span>.NET</span>
+                        <span>SQL Server</span>
+                    </div>
+                    <div class="portfolio-stats">
+                        <div class="stat">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>1000+ заказов/мес</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span>5 месяцев</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-overlay">
+                    <a href="#" class="view-project">Подробнее о проекте</a>
+                </div>
+            </div>
+
+            <!-- Корпоративный сайт строительной компании -->
+            <div class="portfolio-item fade-in" data-category="corporate">
+                <div class="portfolio-image" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"
+                     alt="Сайт строительной компании - разработка DevStudio">
+                </div>
+                <div class="portfolio-content">
+                    <span class="portfolio-category">Корпоративный сайт</span>
+                    <h3>BuildMaster - строительная компания</h3>
+                    <p>Современный сайт с каталогом проектов и системой расчета стоимости</p>
+                    <div class="portfolio-tech">
+                        <span>WordPress</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="portfolio-stats">
+                        <div class="stat">
+                            <i class="fas fa-phone"></i>
+                            <span>+200 заявок</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span>2 месяца</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-overlay">
+                    <a href="#" class="view-project">Подробнее о проекте</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <h2>Наша статистика в цифрах</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Завершённых проектов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="45">0</div>
+                    <div class="stat-label">Интернет-магазинов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="67">0</div>
+                    <div class="stat-label">Корпоративных сайтов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="testimonials">
+            <h2>Отзывы наших клиентов</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <p>"DevStudio создали для нас интернет-магазин, который превзошел все ожидания. Продажи выросли на 300% за первый месяц!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Александр Петров">
+                        <div>
+                            <h4>Александр Петров</h4>
+                            <span>Директор FashionStore</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <p>"Работали над корпоративным порталом. Команда проявила высокий профессионализм и внимательность к деталям."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Мария Иванова">
+                        <div>
+                            <h4>Мария Иванова</h4>
+                            <span>CTO TechCorp</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <p>"Лендинг от DevStudio привлек рекордное количество заявок. Конверсия 25% - это невероятный результат!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Дмитрий Сидоров">
+                        <div>
+                            <h4>Дмитрий Сидоров</h4>
+                            <span>Основатель StartApp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Готовы начать свой проект?</h2>
+            <p>Свяжитесь с нами для бесплатной консультации и расчета стоимости</p>
+            <a href="contact.html" class="btn">Обсудить проект</a>
         </div>
     </section>
 
     <footer>
         <div class="container">
+            <div class="logo" style="margin-bottom: 1rem;">DevStudio</div>
+            <p>Создаём цифровые решения для вашего успеха</p>
+            <div class="social-links">
+                <a href="https://vk.com/devstudio" rel="nofollow"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/devstudio" rel="nofollow"><i class="fab fa-telegram"></i></a>
+                <a href="https://instagram.com/devstudio" rel="nofollow"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/devstudio" rel="nofollow"><i class="fab fa-youtube"></i></a>
+            </div>
             <p>&copy; 2024 DevStudio. Все права защищены.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Фильтрация портфолио
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Убираем активный класс у всех кнопок
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Добавляем активный класс текущей кнопке
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // Анимация при наведении на карточки портфолио
+            portfolioItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
