@@ -1,5 +1,4 @@
-[file name]: script.js
-[file content begin]
+
 // Плавная прокрутка для навигации
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -130,4 +129,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     lazyImages.forEach(img => imageObserver.observe(img));
 });
-[file content end]
+
