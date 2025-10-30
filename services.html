@@ -1,10 +1,15 @@
+[file name]: services.html
+[file content begin]
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Услуги - DevStudio</title>
+    <title>Услуги веб-разработки | Цены на создание сайтов</title>
+    <meta name="description" content="Полный спектр услуг веб-разработки: от лендингов до интернет-магазинов. Прозрачные цены, гарантия качества. Закажите бесплатную консультацию.">
+    <meta name="keywords" content="услуги веб-разработки, цены на сайты, создание лендинга, интернет-магазин под ключ">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -17,49 +22,93 @@
                 <li><a href="portfolio.html">Портфолио</a></li>
                 <li><a href="contact.html">Контакты</a></li>
             </ul>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Поиск по сайту...">
+            </div>
         </nav>
     </header>
 
-    <section class="container" style="padding-top: 120px;">
-        <h1>Наши услуги</h1>
-        
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Наши услуги веб-разработки</h1>
+            <p>Полный цикл создания цифровых продуктов для вашего бизнеса</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <span>Услуги</span>
+        </div>
+    </div>
+
+    <section class="container">
+        <h2>Прайс-лист на услуги</h2>
         <div class="services-grid">
             <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
                 <h3>Лендинг</h3>
-                <p>от 15 000 ₽</p>
+                <p>Одностраничный сайт для привлечения клиентов</p>
+                <div class="price">от 25 000 ₽</div>
                 <ul>
                     <li>Адаптивный дизайн</li>
                     <li>SEO-оптимизация</li>
-                    <li>Контент-менеджмент</li>
+                    <li>Форма обратной связи</li>
+                    <li>Гарантия 6 месяцев</li>
                 </ul>
+                <a href="contact.html" class="btn" style="margin-top: 1rem;">Заказать</a>
             </div>
             
             <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
                 <h3>Корпоративный сайт</h3>
-                <p>от 30 000 ₽</p>
+                <p>Многостраничный сайт для компании</p>
+                <div class="price">от 60 000 ₽</div>
                 <ul>
-                    <li>Многостраничный сайт</li>
+                    <li>До 10 страниц</li>
                     <li>Админ-панель</li>
-                    <li>Интеграция с CRM</li>
+                    <li>Блог/Новости</li>
+                    <li>Гарантия 12 месяцев</li>
                 </ul>
+                <a href="contact.html" class="btn" style="margin-top: 1rem;">Заказать</a>
             </div>
             
             <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
                 <h3>Интернет-магазин</h3>
-                <p>от 50 000 ₽</p>
+                <p>Полнофункциональный магазин</p>
+                <div class="price">от 120 000 ₽</div>
                 <ul>
-                    <li>Корзина покупок</li>
-                    <li>Платежные системы</li>
-                    <li>Управление товарами</li>
+                    <li>Каталог товаров</li>
+                    <li>Корзина и оплата</li>
+                    <li>Управление заказами</li>
+                    <li>Гарантия 12 месяцев</li>
                 </ul>
+                <a href="contact.html" class="btn" style="margin-top: 1rem;">Заказать</a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
+            <div class="logo" style="margin-bottom: 1rem;">DevStudio</div>
+            <p>Создаём цифровые решения для вашего успеха</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
             <p>&copy; 2024 DevStudio. Все права защищены.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+[file content end]
