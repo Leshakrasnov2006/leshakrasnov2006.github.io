@@ -8,6 +8,21 @@
     <meta name="keywords" content="портфолио веб-студии, примеры работ, созданные сайты, кейсы DevStudio">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Fallback styles for images */
+        .portfolio-image {
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+        }
+        .portfolio-image::before {
+            content: "Изображение проекта";
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -54,8 +69,12 @@
         <div class="portfolio-grid">
             <!-- Интернет-магазин одежды -->
             <div class="portfolio-item fade-in" data-category="ecommerce">
-                <div class="portfolio-image" style="background-image: url('https://picsum.photos/800/600?random=1')" 
-                     alt="Интернет-магазин модной одежды - проект DevStudio">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-shopping-bag" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <div>FashionStore</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Интернет-магазин</div>
+                    </div>
                 </div>
                 <div class="portfolio-content">
                     <span class="portfolio-category">E-commerce</span>
@@ -84,8 +103,12 @@
 
             <!-- Корпоративный портал -->
             <div class="portfolio-item fade-in" data-category="corporate">
-                <div class="portfolio-image" style="background-image: url('https://picsum.photos/800/600?random=2')"
-                     alt="Корпоративный портал компании - разработка DevStudio">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-building" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <div>TechCorp Portal</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Корпоративная система</div>
+                    </div>
                 </div>
                 <div class="portfolio-content">
                     <span class="portfolio-category">Корпоративный сайт</span>
@@ -114,8 +137,12 @@
 
             <!-- Лендинг для стартапа -->
             <div class="portfolio-item fade-in" data-category="landing">
-                <div class="portfolio-image" style="background-image: url('https://picsum.photos/800/600?random=3')"
-                     alt="Лендинг для IT-стартапа - разработка DevStudio">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-rocket" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <div>StartApp</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Лендинг</div>
+                    </div>
                 </div>
                 <div class="portfolio-content">
                     <span class="portfolio-category">Лендинг</span>
@@ -144,8 +171,12 @@
 
             <!-- Мобильное приложение -->
             <div class="portfolio-item fade-in" data-category="mobile">
-                <div class="portfolio-image" style="background-image: url('https://picsum.photos/800/600?random=4')"
-                     alt="Мобильное приложение для доставки еды - разработка DevStudio">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white;">
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-mobile-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <div>FoodExpress</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Мобильное приложение</div>
+                    </div>
                 </div>
                 <div class="portfolio-content">
                     <span class="portfolio-category">Мобильное приложение</span>
@@ -174,8 +205,12 @@
 
             <!-- Интернет-магазин электроники -->
             <div class="portfolio-item fade-in" data-category="ecommerce">
-                <div class="portfolio-image" style="background-image: url('https://picsum.photos/800/600?random=5')"
-                     alt="Интернет-магазин электроники - проект DevStudio">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white;">
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-laptop" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <div>ElectroMarket</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Интернет-магазин</div>
+                    </div>
                 </div>
                 <div class="portfolio-content">
                     <span class="portfolio-category">E-commerce</span>
@@ -204,8 +239,12 @@
 
             <!-- Корпоративный сайт строительной компании -->
             <div class="portfolio-item fade-in" data-category="corporate">
-                <div class="portfolio-image" style="background-image: url('https://picsum.photos/800/600?random=6')"
-                     alt="Сайт строительной компании - разработка DevStudio">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333;">
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-hard-hat" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <div>BuildMaster</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Строительная компания</div>
+                    </div>
                 </div>
                 <div class="portfolio-content">
                     <span class="portfolio-category">Корпоративный сайт</span>
@@ -267,7 +306,9 @@
                         <p>"DevStudio создали для нас интернет-магазин, который превзошел все ожидания. Продажи выросли на 300% за первый месяц!"</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://i.pravatar.cc/100?img=1" alt="Александр Петров">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                            АП
+                        </div>
                         <div>
                             <h4>Александр Петров</h4>
                             <span>Директор FashionStore</span>
@@ -279,7 +320,9 @@
                         <p>"Работали над корпоративным порталом. Команда проявила высокий профессионализм и внимательность к деталям."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://i.pravatar.cc/100?img=2" alt="Мария Иванова">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                            МИ
+                        </div>
                         <div>
                             <h4>Мария Иванова</h4>
                             <span>CTO TechCorp</span>
@@ -291,7 +334,9 @@
                         <p>"Лендинг от DevStudio привлек рекордное количество заявок. Конверсия 25% - это невероятный результат!"</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://i.pravatar.cc/100?img=3" alt="Дмитрий Сидоров">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                            ДС
+                        </div>
                         <div>
                             <h4>Дмитрий Сидоров</h4>
                             <span>Основатель StartApp</span>
