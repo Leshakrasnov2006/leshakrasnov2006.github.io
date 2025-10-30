@@ -4,31 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - DevStudio</title>
+    <meta name="description" content="Свяжитесь с веб-студией DevStudio. Контакты, адрес, телефон, форма обратной связи. Бесплатная консультация по разработке сайтов.">
+    <meta name="keywords" content="контакты DevStudio, веб-студия Москва, создание сайтов контакты">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav class="container">
             <div class="logo">DevStudio</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="about.html">О нас</a></li>
                 <li><a href="services.html">Услуги</a></li>
                 <li><a href="portfolio.html">Портфолио</a></li>
                 <li><a href="contact.html">Контакты</a></li>
             </ul>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Поиск по сайту...">
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
-    <section class="container" style="padding-top: 120px;">
-        <h1>Свяжитесь с нами</h1>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Контакты</h1>
+            <p>Свяжитесь с нами для обсуждения вашего проекта</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <span>Контакты</span>
+        </div>
+    </div>
+
+    <section class="container" style="padding: 50px 0 100px;">
+        <h2>Свяжитесь с нами</h2>
         
         <div class="contact-grid">
             <div class="contact-info">
                 <h3>Контакты</h3>
-                <p>📧 info@devstudio.ru</p>
-                <p>📞 +7 (999) 123-45-67</p>
-                <p>📍 Москва, ул. Примерная, 123</p>
+                <p><i class="fas fa-envelope"></i> info@devstudio.ru</p>
+                <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Примерная, 123</p>
+                <div class="social-links" style="justify-content: flex-start; margin-top: 2rem;">
+                    <a href="https://vk.com/devstudio" rel="nofollow"><i class="fab fa-vk"></i></a>
+                    <a href="https://t.me/devstudio" rel="nofollow"><i class="fab fa-telegram"></i></a>
+                    <a href="https://instagram.com/devstudio" rel="nofollow"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/devstudio" rel="nofollow"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
             
             <div class="contact-form">
@@ -36,6 +64,7 @@
                 <form>
                     <input type="text" placeholder="Ваше имя" required>
                     <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Телефон">
                     <textarea placeholder="Сообщение" rows="5" required></textarea>
                     <button type="submit" class="btn">Отправить</button>
                 </form>
@@ -45,8 +74,18 @@
 
     <footer>
         <div class="container">
+            <div class="logo" style="margin-bottom: 1rem;">DevStudio</div>
+            <p>Создаём цифровые решения для вашего успеха</p>
+            <div class="social-links">
+                <a href="https://vk.com/devstudio" rel="nofollow"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/devstudio" rel="nofollow"><i class="fab fa-telegram"></i></a>
+                <a href="https://instagram.com/devstudio" rel="nofollow"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/devstudio" rel="nofollow"><i class="fab fa-youtube"></i></a>
+            </div>
             <p>&copy; 2024 DevStudio. Все права защищены.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
