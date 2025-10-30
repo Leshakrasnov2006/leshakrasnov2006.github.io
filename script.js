@@ -129,4 +129,86 @@ document.addEventListener('DOMContentLoaded', function() {
 
     lazyImages.forEach(img => imageObserver.observe(img));
 });
+// Анимация фильтров портфолио
+function initPortfolioFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
 
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Убираем активный класс у всех кнопок
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Добавляем активный класс текущей кнопке
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+
+            portfolioItems.forEach((item, index) => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 100);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+
+    // Анимация при наведении на карточки портфолио
+    portfolioItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) scale(1.02)';
+            this.style.boxShadow = '0 25px 60px rgba(0,0,0,0.2)';
+        });
+
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(-10px) scale(1)';
+            this.style.boxShadow = '0 20px 50px rgba(0,0,0,0.15)';
+        });
+    });
+}
+
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    // Инициализация фильтров портфолио
+    if (document.querySelector('.portfolio-filters')) {
+        initPortfolioFilters();
+    }
+    
+    // Анимация появления элементов при скролле для портфолио
+    const portfolioObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.portfolio-item, .testimonial-card').forEach(el => {
+        portfolioObserver.observe(el);
+    });
+});
+
+// Параллакс эффект для hero секции
+function initParallax() {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxSpeed = 0.5;
+            hero.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+        });
+    }
+}
+
+// Инициализация параллакса
+if (document.querySelector('.hero')) {
+    initParallax();
+}
