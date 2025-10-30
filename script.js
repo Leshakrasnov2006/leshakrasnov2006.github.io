@@ -1,4 +1,3 @@
-
 // Плавная прокрутка для навигации
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -129,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     lazyImages.forEach(img => imageObserver.observe(img));
 });
+
 // Анимация фильтров портфолио
 function initPortfolioFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
